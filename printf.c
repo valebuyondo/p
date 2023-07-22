@@ -31,6 +31,13 @@ int _printf(const char *format, ...)
 					len++;
 				}
 			}
+			if (format[i] == 'c')
+			{
+				int character;
+				character = va_arg(arg_list, int);
+				_putchar(character);
+				len++;
+			}
 
 		}
 		else
